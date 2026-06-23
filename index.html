@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <!-- Basic page settings -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>VillaNova – Événements culturels</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="scss/style.css" />
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <i class="ri-building-fill" aria-hidden="true"></i>
+        Villa<strong>Nova</strong>
+      </a>
+
+      <!-- Navigation menu -->
+      <nav aria-label="Navigation principale">
+        <ul class="header__nav">
+          <li>
+            <a href="index.html" class="nav__link nav__link--active">
+              Événements
+            </a>
+          </li>
+
+          <li>
+            <a href="#about" class="nav__link">
+              À propos
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Hero section -->
+    <section class="hero">
+      <div class="container">
+
+        <!-- Main title -->
+        <h1 class="hero__title">
+          Explorez la culture à VillaNova
+        </h1>
+
+        <!-- Small text -->
+        <p class="hero__subtitle">
+          Concerts, expositions, spectacles – tout au même endroit.
+        </p>
+
+        <!-- Search area -->
+        <div class="hero__search" role="search">
+
+          <label for="search" class="sr-only">
+            Rechercher
+          </label>
+
+          <input
+            type="search"
+            id="search"
+            class="search__input"
+            placeholder="Rechercher un événement..."
+          />
+
+          <button class="btn btn--accent" id="search-btn">
+            <i class="ri-search-line" aria-hidden="true"></i>
+            Rechercher
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Category filters -->
+    <section class="filters">
+      <div class="container">
+
+        <div
+          class="filters__list"
+          role="group"
+          aria-label="Filtres par catégorie"
+        >
+
+          <button
+            class="filter__btn filter__btn--active"
+            data-category="all"
+            aria-pressed="true"
+          >
+            Tout
+          </button>
+
+          <button
+            class="filter__btn"
+            data-category="concert"
+            aria-pressed="false"
+          >
+            <i class="ri-music-fill"></i>
+            Concerts
+          </button>
+
+          <button
+            class="filter__btn"
+            data-category="exhibition"
+            aria-pressed="false"
+          >
+            <i class="ri-gallery-fill"></i>
+            Expositions
+          </button>
+
+          <button
+            class="filter__btn"
+            data-category="theater"
+            aria-pressed="false"
+          >
+            <i class="ri-movie-fill"></i>
+            Spectacles
+          </button>
+
+          <button
+            class="filter__btn"
+            data-category="festival"
+            aria-pressed="false"
+          >
+            <i class="ri-star-fill"></i>
+            Festivals
+          </button>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Events section -->
+    <section class="events">
+      <div class="container">
+
+        <h2 class="section__title">
+          Événements à venir
+        </h2>
+
+        <!-- Number of events -->
+        <p id="events-count" aria-live="polite"></p>
+
+        <!-- Status message -->
+        <p id="status" role="status" aria-live="polite"></p>
+
+        <!-- Events list -->
+        <ul
+          class="events__grid"
+          id="events-grid"
+          role="list"
+        ></ul>
+
+        <!-- Pagination -->
+        <nav
+          class="pagination"
+          aria-label="Pagination"
+          id="pagination"
+          hidden
+        >
+          <button
+            class="btn btn--secondary"
+            id="prev-btn"
+            disabled
+          >
+            ← Précédent
+          </button>
+
+          <span id="page-info"></span>
+
+          <button
+            class="btn btn--secondary"
+            id="next-btn"
+          >
+            Suivant →
+          </button>
+        </nav>
+
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="about" id="about">
+      <div class="container">
+
+        <h2 class="section__title">
+          À propos
+        </h2>
+
+        <p>
+          VillaNova est une plateforme qui permet de découvrir
+          des événements culturels grâce à l'API OpenAgenda.
+        </p>
+
+        <p>
+          Les utilisateurs peuvent rechercher des événements,
+          filtrer par catégorie et consulter leurs détails.
+        </p>
+
+        <p>
+          Ce projet a été réalisé dans le cadre d'un exercice
+          de développement web en HTML, SCSS et JavaScript.
+        </p>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer__inner">
+
+      <!-- Footer logo -->
+      <p class="footer__logo">
+        Villa<strong>Nova</strong>
+      </p>
+
+      <!-- Data source -->
+      <p class="footer__credits">
+        Données :
+        <a
+          href="https://openagenda.com"
+          target="_blank"
+          rel="noopener"
+        >
+          OpenAgenda
+        </a>
+      </p>
+
+    </div>
+  </footer>
+
+  <!-- JavaScript file -->
+  <script src="js/main.js" defer></script>
+
+</body>
+</html>
