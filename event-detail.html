@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+  <!-- Basic page settings -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Page title -->
+  <title>Événement – VillaNova</title>
+
+  <!-- Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS file -->
+  <link rel="stylesheet" href="scss/style.css" />
+
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="header__logo">
+        <i class="ri-building-fill" aria-hidden="true"></i>
+        Villa<strong>Nova</strong>
+      </a>
+
+      <!-- Navigation menu -->
+      <nav aria-label="Navigation principale">
+        <ul class="header__nav">
+          <li>
+            <a href="index.html" class="nav__link">
+              Événements
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html#about" class="nav__link">
+              À propos
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Fil d'Ariane">
+      <div class="container">
+
+        <ol class="breadcrumb__list">
+
+          <!-- Home link -->
+          <li>
+            <a href="index.html" class="breadcrumb__link">
+              <i class="ri-home-fill" aria-hidden="true"></i>
+              Accueil
+            </a>
+          </li>
+
+          <!-- Current page -->
+          <li aria-current="page" id="breadcrumb-title">
+            Événement
+          </li>
+
+        </ol>
+
+      </div>
+    </nav>
+
+    <!-- Loading message -->
+    <p
+      id="status"
+      class="container"
+      role="status"
+      aria-live="polite"
+    ></p>
+
+    <!-- Event detail page -->
+    <article class="detail" id="event-detail">
+
+      <!-- Event image -->
+      <div
+        class="detail__hero"
+        id="event-hero"
+      ></div>
+
+      <div class="container detail__body">
+
+        <!-- Main content -->
+        <div class="detail__main">
+
+          <!-- Event title -->
+          <div id="event-header"></div>
+
+          <!-- Event description -->
+          <section aria-labelledby="desc-title">
+
+            <h2 id="desc-title" class="section__title">
+              <i class="ri-file-text-fill" aria-hidden="true"></i>
+              Description
+            </h2>
+
+            <div id="event-description"></div>
+
+          </section>
+
+        </div>
+
+        <!-- Sidebar -->
+        <aside
+          class="detail__sidebar"
+          aria-label="Informations pratiques"
+        >
+
+          <!-- Back button -->
+          <a href="index.html" class="btn btn--secondary btn--full">
+            <i class="ri-arrow-left-line" aria-hidden="true"></i>
+            Retour à la liste
+          </a>
+
+          <!-- Event info -->
+          <div class="info-card" id="event-info"></div>
+
+          <!-- Reservation button -->
+          <div id="event-reservation"></div>
+
+        </aside>
+
+      </div>
+
+    </article>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+
+    <div class="container footer__inner">
+
+      <!-- Footer logo -->
+      <p class="footer__logo">
+        Villa<strong>Nova</strong>
+      </p>
+
+      <!-- API source -->
+      <p class="footer__credits">
+        Données :
+        <a
+          href="https://openagenda.com"
+          target="_blank"
+          rel="noopener"
+        >
+          OpenAgenda
+        </a>
+      </p>
+
+    </div>
+
+  </footer>
+
+  <!-- JavaScript file -->
+  <script src="js/detail.js" defer></script>
+
+</body>
+</html>
